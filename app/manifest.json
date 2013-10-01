@@ -1,0 +1,10 @@
+{
+    "name": "Trigulous",
+    "description": "Trigonometic calculator.",
+    "version": "0.1",
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
+    }
+}
