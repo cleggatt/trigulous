@@ -15,6 +15,10 @@ controller('CalcCtrl', ['$scope', function ($scope) {
         }
     }
 
+    var formatFloat = function(value) {
+        return value.toFixed(6);
+    }
+
     $scope.inputChanged = function() {
 
         $scope.errors = {};
@@ -35,10 +39,10 @@ controller('CalcCtrl', ['$scope', function ($scope) {
 
         var decimal = degrees + (minutes / 60) + (seconds / 3600);
 
-        $scope.decimal = decimal
+        $scope.decimal = formatFloat(decimal);
 
-        $scope.sine = Math.sin(decimal * Math.PI / 180) * distance;
-        $scope.cosine = Math.cos(decimal * Math.PI /180)* distance;
-        $scope.secant = (1 / Math.cos(decimal * Math.PI /180 )) * distance;
+        $scope.sine = formatFloat(Math.sin(decimal * Math.PI / 180) * distance);
+        $scope.cosine = formatFloat(Math.cos(decimal * Math.PI /180)* distance);
+        $scope.secant = formatFloat((1 / Math.cos(decimal * Math.PI /180 )) * distance);
     }
 }]);
