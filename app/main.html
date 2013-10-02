@@ -22,18 +22,15 @@
             <div class="inline field" data-ng-class="{ error: errors.degrees }">
                 <label>Degrees</label>
                 <input placeholder="Enter degrees..." name="degrees" type="text" data-ng-model="degrees" data-ng-change="inputChanged()">
-                <div class="ui red label pointing left" data-ng-show="errors.degrees">Invalid</div>
             </div>
 
             <div class="inline field" data-ng-class="{ error: errors.minutes }">
                 <label>Minutes&nbsp;</label>
                 <input placeholder="Enter minutes..." name="minutes" type="text" data-ng-model="minutes" data-ng-change="inputChanged()">
-                <div class="ui red label pointing left" data-ng-show="errors.minutes">Invalid</div>
             </div>
             <div class="inline field" data-ng-class="{ error: errors.seconds }">
                 <label>Seconds</label>
                 <input placeholder="Enter seconds..." name="seconds" type="text" data-ng-model="seconds" data-ng-change="inputChanged()">
-                <div class="ui red label pointing left" data-ng-show="errors.seconds">Invalid</div>
             </div>
             <div class="ui horizontal divider">
                 AND
@@ -42,7 +39,6 @@
                 <label>Distance</label>
                 <input placeholder="Enter distance..." name="distance" type="text" data-ng-model="distance"
                        data-ng-change="inputChanged()">
-                <div class="ui red label pointing left" data-ng-show="errors.distance">Invalid</div>
             </div>
         </div>
 
