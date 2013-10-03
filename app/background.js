@@ -1,7 +1,11 @@
 chrome.app.runtime.onLaunched.addListener(function() {
-    chrome.app.window.create('main.html', {
+
+    var options = {
         'bounds': {
-            'width': 250
+            // Something on Windows is wider
+            'width': (navigator.appVersion.indexOf("Win") != -1) ? 260 : 250
         }
-    });
+    };
+
+    chrome.app.window.create('main.html', options);
 });
